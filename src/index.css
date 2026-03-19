@@ -1,0 +1,28 @@
+.nav-span{font-size: 16px;text-align: center;font-weight: 600;}
+.istore{font-size: 30px !important;}
+.custom-Nav .nav-link {
+  color: white !important;
+  font-weight: 600;
+}
+.custom-navbar .custom-Nav .nav-link.active {
+  text-decoration: underline !important;
+  font-weight: bold;
+}
+
+
+
+/* If you want the navbar to be fixed at the top */
+.custom-navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+.login-container{margin-top:100px;margin-left:150px;display: flex;justify-content: center;align-items: center;flex-direction: column;}
+.login-container div{display: flex;gap:50px;margin-bottom: 10px;justify-content: center;align-items: center;}
+.login-container div input{border: 1px solid black;border-radius: 5px;}
+.register-line{display: flex;justify-content: center;align-items: center;gap:10px !important;font-size: 12px;}
+.register-line p a{color: black;font-weight: 600; text-decoration: none !important;}
+.login-btn{width: 150px;margin-left: 70px;margin-top: 20px;margin-bottom: 20px;}
