@@ -1,6 +1,19 @@
 import axios from 'axios';
 
-const baseURL = '/api'; // or import.meta.env.VITE_API_URL || '/api'
+// Check if we're in production
+const isProduction = import.meta.env.PROD;
+const apiUrl = import.meta.env.VITE_API_URL;
+
+console.log('Environment:', isProduction ? 'production' : 'development');
+console.log('VITE_API_URL:', apiUrl);
+
+// In production, use the absolute URL from env
+// In development, use relative path (will be proxied)
+const baseURL = isProduction && apiUrl 
+  ? `${apiUrl}/api` 
+  : '/api';
+
+console.log('Final Base URL:', baseURL);
 
 const api = axios.create({ baseURL });
 
@@ -20,8 +33,9 @@ api.interceptors.request.use(
     console.log('API Request:', {
       url: config.url,
       method: config.method,
+      baseURL: config.baseURL,
+      fullURL: `${config.baseURL}${config.url}`,
       hasToken: !!token,
-      tokenPrefix: token ? token.substring(0, 20) + '...' : 'none'
     });
     
     if (token) {
@@ -46,11 +60,9 @@ api.interceptors.response.use(
       originalRequest._retry = true;
 
       try {
-        // ✅ Correct path including 'auth/'
         const refreshResponse = await axios.post(
-          '/auth/token/refresh/',
-          { refresh: getRefreshToken() },
-          { baseURL }
+          `${baseURL}/auth/token/refresh/`,
+          { refresh: getRefreshToken() }
         );
 
         const newAccessToken = refreshResponse.data.access;

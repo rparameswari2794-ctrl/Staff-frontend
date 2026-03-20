@@ -10,8 +10,15 @@ export default defineConfig({
         target: 'http://localhost:8000',
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/api/, '/api')
+        // Only apply proxy in development
+        configure: (proxy, options) => {
+          proxy.on('error', (err, req, res) => {
+            console.log('proxy error', err);
+          });
+        }
       }
     }
-  }
+  },
+  // Define env prefix
+  envPrefix: 'VITE_',
 })
