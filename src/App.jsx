@@ -37,7 +37,6 @@ import MyAttendance from './pages/manager/MyAttendance';
 import MyLeaves from './pages/manager/MyLeaves';
 import ManagerAdvance from './pages/manager/ManagerAdvance';
 
-
 // Staff pages
 import StaffDashboard from './pages/staff/StaffDashboard';
 import StaffAttendance from './pages/staff/Attendance';
@@ -104,244 +103,41 @@ function App() {
             />
 
             {/* Admin routes */}
-            <Route
-              path="/admin/departments"
-              element={
-                <ProtectedRoute>
-                  <Departments />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin/employees"
-              element={
-                <ProtectedRoute>
-                  <AdminEmployees />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin/attendance"
-              element={
-                <ProtectedRoute>
-                  <AdminAttendance />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin/leaves"
-              element={
-                <ProtectedRoute>
-                  <AdminLeaves />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin/products"
-              element={
-                <ProtectedRoute>
-                  <AdminProducts />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin/purchases"
-              element={
-                <ProtectedRoute>
-                  <AdminPurchases />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin/expenses"
-              element={
-                <ProtectedRoute>
-                  <AdminExpenses />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin/sales"
-              element={
-                <ProtectedRoute>
-                  <AdminSales />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin/reports"
-              element={
-                <ProtectedRoute>
-                  <AdminReports />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin/investments"
-              element={
-                <ProtectedRoute>
-                  <AdminInvestments />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin/end-of-day-report"
-              element={
-                <ProtectedRoute>
-                  <EndOfDayReport />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin/salary"
-              element={
-                <ProtectedRoute>
-                  <AdminSalary />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin/salary-advances"
-              element={
-                <ProtectedRoute>
-                  <AdminSalaryAdvances />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/admin/departments" element={<ProtectedRoute><Departments /></ProtectedRoute>} />
+            <Route path="/admin/employees" element={<ProtectedRoute><AdminEmployees /></ProtectedRoute>} />
+            <Route path="/admin/attendance" element={<ProtectedRoute><AdminAttendance /></ProtectedRoute>} />
+            <Route path="/admin/leaves" element={<ProtectedRoute><AdminLeaves /></ProtectedRoute>} />
+            <Route path="/admin/products" element={<ProtectedRoute><AdminProducts /></ProtectedRoute>} />
+            <Route path="/admin/purchases" element={<ProtectedRoute><AdminPurchases /></ProtectedRoute>} />
+            <Route path="/admin/expenses" element={<ProtectedRoute><AdminExpenses /></ProtectedRoute>} />
+            <Route path="/admin/sales" element={<ProtectedRoute><AdminSales /></ProtectedRoute>} />
+            <Route path="/admin/reports" element={<ProtectedRoute><AdminReports /></ProtectedRoute>} />
+            <Route path="/admin/investments" element={<ProtectedRoute><AdminInvestments /></ProtectedRoute>} />
+            <Route path="/admin/end-of-day-report" element={<ProtectedRoute><EndOfDayReport /></ProtectedRoute>} />
+            <Route path="/admin/salary" element={<ProtectedRoute><AdminSalary /></ProtectedRoute>} />
+            <Route path="/admin/salary-advances" element={<ProtectedRoute><AdminSalaryAdvances /></ProtectedRoute>} />
 
             {/* Manager routes */}
-            <Route
-              path="/employees"
-              element={
-                <ProtectedRoute>
-                  <Employees />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/employee-sales"
-              element={
-                <ProtectedRoute>
-                  <EmployeeSales />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/stock-details"
-              element={
-                <ProtectedRoute>
-                  <StockDetails />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/purchases"
-              element={
-                <ProtectedRoute>
-                  <Purchases />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/expenses"
-              element={
-                <ProtectedRoute>
-                  <Expenses />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/daily-reports"
-              element={
-                <ProtectedRoute>
-                  <DailyReports />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/my-attendance"
-              element={
-                <ProtectedRoute>
-                  <MyAttendance />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/my-leaves"
-              element={
-                <ProtectedRoute>
-                  <MyLeaves />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/manager/advance"
-              element={
-                <ProtectedRoute>
-                  <ManagerAdvance />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/employees" element={<ProtectedRoute><Employees /></ProtectedRoute>} />
+            <Route path="/employee-sales" element={<ProtectedRoute><EmployeeSales /></ProtectedRoute>} />
+            <Route path="/stock-details" element={<ProtectedRoute><StockDetails /></ProtectedRoute>} />
+            <Route path="/purchases" element={<ProtectedRoute><Purchases /></ProtectedRoute>} />
+            <Route path="/expenses" element={<ProtectedRoute><Expenses /></ProtectedRoute>} />
+            <Route path="/daily-reports" element={<ProtectedRoute><DailyReports /></ProtectedRoute>} />
+            <Route path="/my-attendance" element={<ProtectedRoute><MyAttendance /></ProtectedRoute>} />
+            <Route path="/my-leaves" element={<ProtectedRoute><MyLeaves /></ProtectedRoute>} />
+            <Route path="/manager/advance" element={<ProtectedRoute><ManagerAdvance /></ProtectedRoute>} />
 
             {/* Staff routes */}
-            <Route
-              path="/attendance"
-              element={
-                <ProtectedRoute>
-                  <StaffAttendance />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/leaves"
-              element={
-                <ProtectedRoute>
-                  <StaffLeaves />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/billing"
-              element={
-                <ProtectedRoute>
-                  <StaffBilling />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/products"
-              element={
-                <ProtectedRoute>
-                  <Products />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/bills"
-              element={
-                <ProtectedRoute>
-                  <MyBills />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/salary-advance"
-              element={
-                <ProtectedRoute>
-                  <SalaryAdvance />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/attendance" element={<ProtectedRoute><StaffAttendance /></ProtectedRoute>} />
+            <Route path="/leaves" element={<ProtectedRoute><StaffLeaves /></ProtectedRoute>} />
+            <Route path="/billing" element={<ProtectedRoute><StaffBilling /></ProtectedRoute>} />
+            <Route path="/products" element={<ProtectedRoute><Products /></ProtectedRoute>} />
+            <Route path="/bills" element={<ProtectedRoute><MyBills /></ProtectedRoute>} />
+            <Route path="/salary-advance" element={<ProtectedRoute><SalaryAdvance /></ProtectedRoute>} />
 
-            {/* Role-based Salary Route - Single route for both manager and staff */}
-            <Route
-              path="/my-salary"
-              element={
-                <ProtectedRoute>
-                  <MySalaryWrapper />
-                </ProtectedRoute>
-              }
-            />
+            {/* Role-based Salary Route */}
+            <Route path="/my-salary" element={<ProtectedRoute><MySalaryWrapper /></ProtectedRoute>} />
 
             {/* Catch all */}
             <Route path="*" element={<Navigate to="/" />} />
