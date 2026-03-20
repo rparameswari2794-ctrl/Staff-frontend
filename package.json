@@ -15,6 +15,7 @@
     "@mui/icons-material": "^7.3.9",
     "@mui/material": "^7.3.9",
     "@reduxjs/toolkit": "^2.11.2",
+    "axios": "^1.13.6",
     "bootstrap": "^5.3.8",
     "date-fns": "^4.1.0",
     "date-fns-tz": "^3.2.0",
