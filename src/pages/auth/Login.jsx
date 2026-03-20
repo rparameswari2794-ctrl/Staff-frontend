@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom'; // ✅ added Link import
 import api from '../../services/api'; // adjust path if your folder structure differs
 import { useDispatch } from 'react-redux'; // add this
-import { login } from '../../store/slices/authSliceS'; // adjust path
+import { login } from '../../store/slices/authSlices'; // adjust path
 
 
 const Login = () => {
